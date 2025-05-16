@@ -33,3 +33,77 @@ a,
     padding: 0 2rem;
   }
 } */
+
+h3 {
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+
+input[type=text],input[type=number], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+}
+
+
+div.informations {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+div.informations button {
+  background-color: #36304A;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+div.informations button:hover {
+  background-color: #ccc;
+  color: black;
+}
+
+table {
+        border-collapse: collapse;
+    }
+
+    table th {
+        background: #36304A;
+        color: white;
+        font-weight: bold;
+    }
+
+    table th, td {
+        padding: 10px 30px;
+        text-align: center;
+    }
+    .price {
+        text-align: right;
+    }
+
+tr:nth-child(even){background-color: #f2f2f2;}
+
+.message {
+  border: 1px solid #eee;
+}

@@ -1,7 +1,8 @@
 <template>
   <div>
     <h3>Component - C (Category wise summary)</h3>
-    <table border="1">
+    <div class="table-wrapper">
+    <table>
       <thead>
         <tr>
             <th>Category</th>
@@ -10,6 +11,10 @@
         </tr>
       </thead>
       <tbody>
+
+        <tr v-if="Object.keys(bookStore.categorySummary).length === 0" class="message">
+            <td colspan="3">No category summary available.</td>
+        </tr>
         <tr v-for="(data, category) in bookStore.categorySummary" :key="category">
           <td>{{ category }}</td>
           <td>{{ data.count }}</td>
@@ -17,6 +22,7 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 

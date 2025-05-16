@@ -89,6 +89,7 @@ div.informations button:hover {
 
 table {
   border-collapse: collapse;
+  width: 100%;
 }
 
 table th {

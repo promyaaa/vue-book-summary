@@ -4,7 +4,9 @@ export const useBookStore = defineStore('bookStore', {
   state: () => ({
     books: [],
   }),
-  getters: {},
+  getters: {
+    totalPrice: (state) => state.books.reduce((sum, book) => sum + book.price, 0)
+  },
   actions: {
     addBook(book) {
       this.books.push(book)

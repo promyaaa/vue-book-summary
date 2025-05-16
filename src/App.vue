@@ -2,6 +2,7 @@
 import AddBookForm from './components/AddBookForm.vue'
 import BookList from './components/BookList.vue'
 import CategorySummary from './components/CategorySummary.vue'
+import AuthorSummary from './components/AuthorSummary.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import CategorySummary from './components/CategorySummary.vue'
   <AddBookForm />
   <BookList />
   <CategorySummary />
+  <AuthorSummary />
 </template>
 
 <style scoped></style>

@@ -17,6 +17,17 @@ export const useBookStore = defineStore('bookStore', {
       });
       return summary;
     },
+    authorSummary: (state) => {
+      const summary = {};
+      state.books.forEach(book => {
+        if (!summary[book.author]) {
+          summary[book.author] = { count: 0, totalPrice: 0 };
+        }
+        summary[book.author].count++;
+        summary[book.author].totalPrice += book.price;
+      });
+      return summary;
+    }
   },
   actions: {
     addBook(book) {

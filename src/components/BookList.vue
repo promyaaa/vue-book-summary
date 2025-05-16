@@ -29,7 +29,6 @@
         </tr>
       </tfoot>
     </table>
-    
   </div>
 </template>
 

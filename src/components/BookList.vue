@@ -2,37 +2,37 @@
   <div>
     <h3>Component - B (List)</h3>
     <div class="table-wrapper">
-        <table>
+      <table>
         <thead>
-            <tr>
+          <tr>
             <th>#</th>
             <th>Book Category</th>
             <th>Author</th>
             <th>Book Title</th>
             <th>Price</th>
-            </tr>
+          </tr>
         </thead>
         <tbody>
-            <tr v-if="Object.keys(bookStore.books).length === 0" class="message">
-                <td colspan="5">No book summary available.</td>
-            </tr>
-            <tr v-for="(book, index) in bookStore.books" :key="index">
+          <tr v-if="Object.keys(bookStore.books).length === 0" class="message">
+            <td colspan="5">No book summary available.</td>
+          </tr>
+          <tr v-for="(book, index) in bookStore.books" :key="index">
             <td>{{ index + 1 }}</td>
             <td>{{ book.category }}</td>
             <td>{{ book.author }}</td>
             <td>{{ book.title }}</td>
             <td>{{ book.price }}</td>
-            </tr>
+          </tr>
         </tbody>
         <tfoot v-if="Object.keys(bookStore.books).length > 0">
-            <tr>
+          <tr>
             <td colspan="4" class="price"><strong>Total Price</strong></td>
             <td>
-                <strong>{{ bookStore.totalPrice }}</strong>
+              <strong>{{ bookStore.totalPrice }}</strong>
             </td>
-            </tr>
+          </tr>
         </tfoot>
-        </table>
+      </table>
     </div>
   </div>
 </template>
@@ -42,6 +42,4 @@ import { useBookStore } from '../stores/bookStore'
 const bookStore = useBookStore()
 </script>
 
-<style>
-    
-</style>
+<style></style>

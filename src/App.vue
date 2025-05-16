@@ -43,5 +43,4 @@ import AuthorSummary from './components/AuthorSummary.vue'
     grid-template-columns: 1fr;
   }
 }
-
 </style>

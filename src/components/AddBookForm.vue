@@ -19,9 +19,29 @@
     <input v-model="title" placeholder="Book Title" />
     <input v-model.number="price" type="number" placeholder="Price" />
     <button @click="addBook">ADD</button>
+
+    {{bookStore.books}}
   </div>
 </template>
 
 <script setup>
+
+import { ref } from 'vue';
+import { useBookStore } from '../stores/bookStore';
+
+const category = ref('');
+const author = ref('');
+const title = ref('');
+const price = ref(0);
+
+const bookStore = useBookStore();
+
+const addBook = () => {
+  if (category.value && author.value && title.value && price.value > 0) {
+    bookStore.addBook({ category: category.value, author: author.value, title: title.value, price: price.value });
+    category.value = author.value = title.value = '';
+    price.value = 0;
+  }
+};
 
 </script>
